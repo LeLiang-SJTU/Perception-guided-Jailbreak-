@@ -1,0 +1,40 @@
+[api_keys]
+openai = "YOUR_OPENAI_API_KEY"  # OpenAI API密钥
+zhipu = "YOUR_ZHIPU_API_KEY"   # 智谱API密钥
+ali = "YOUR_ALI_API_KEY"     # 阿里云API密钥
+tencent_secret_id = "YOUR_TENCENT_SECRET_ID"  # 腾讯云SecretId
+tencent_secret_key = "YOUR_TENCENT_SECRET_KEY" # 腾讯云SecretKey
+baidu = "YOUR_BAIDU_API_KEY"   # 百度千帆API密钥
+
+[model_config]
+openai_models = ["dall-e-2", "dall-e-3"]  # OpenAI可用模型列表
+openai_default = "dall-e-3"  # OpenAI默认模型
+zhipu_model = "cogview-3"  # 智谱模型版本
+tencent_region = "ap-guangzhou"  # 腾讯云区域
+default_text_model = "gpt-4o" # 默认文本模型
+
+[model_params]
+[model_params.openai]
+model = "dall-e-3"
+size = "1024x1024"
+quality = "standard"
+style = "natural"
+n = 1
+
+[model_params.zhipu]
+model = "cogview-3"
+size = "1024x1024"
+n = 1
+
+[model_params.tencent]
+resolution = "1024x1024"
+
+[model_params.ali]
+size = "1024*1024"
+n = 1
+
+[system]
+image_save_path = "generated_images"  # 生成图片保存路径
+csv_save_path = "csv"  # 日志保存路径
+max_retries = 3  # API调用最大重试次数
+timeout = 30  # API调用超时时间（秒） 
